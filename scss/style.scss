@@ -1,3 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.time {
+    text-align: center;
+    
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .row1 {
     width: 100%;
     display: grid;
@@ -10,4 +29,11 @@
     border: 2px solid black;
     border-radius: 10px;
     padding: 5px;
+}
+
+@media (max-width: 1200px) {
+    .body {
+        width: 100%;
+        padding: 10px;
+    }
 }
