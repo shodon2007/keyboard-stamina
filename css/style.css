@@ -30,6 +30,10 @@
   padding: 5px;
 }
 
+.active {
+  background-color: red;
+}
+
 @media (max-width: 1200px) {
   .body {
     width: 100%;
