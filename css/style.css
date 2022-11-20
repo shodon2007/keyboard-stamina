@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kavoon&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,18 +18,62 @@
   margin: 0 auto;
 }
 
-.row1 {
+.text {
+  font-family: "Kavoon", cursive;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  height: 50vh;
+}
+
+.printed {
+  color: rgb(96, 96, 96);
+}
+
+.row {
   display: grid;
+  width: 1000px;
   justify-content: space-between;
-  grid-template-columns: repeat(15, 1fr);
+  gap: 5px;
+}
+
+.row1 {
+  grid-template-columns: repeat(13, 1fr) 2fr;
+}
+
+.row2 {
+  grid-template-columns: 1fr repeat(12, 0.5fr) 0.6fr;
+}
+
+.row3 {
+  grid-template-columns: 1.2fr repeat(11, 0.5fr) 1fr;
+}
+
+.row4 {
+  grid-template-columns: 1.2fr repeat(11, 0.5fr) 1fr;
+}
+
+.row5 {
+  grid-template-columns: repeat(3, 1fr) 5fr repeat(4, 1fr);
+}
+
+.buttons {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin: 0 auto;
 }
 
 .button {
+  font-family: "Iceland", cursive;
   text-align: center;
+  font-size: 25px;
   border: 2px solid black;
   border-radius: 10px;
-  padding: 5px;
+  padding: 15px 0;
 }
 
 .active {
