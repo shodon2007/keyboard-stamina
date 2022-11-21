@@ -1,4 +1,4 @@
-let text = "hellomynameisshodonasrorovandiam15yearsold";
+let text = "grid template colums";
 let letter = text.split('');
 let mistakes = 0;
 let thisLetter = 0;
@@ -9,7 +9,6 @@ seeText.innerHTML = text.slice(thisLetter);
 print();
 
 document.addEventListener('keyup', (button) => {
-    console.log(button.key);
     resetStyles();
     print();
     let seeButton = document.getElementById(button.key);
@@ -20,7 +19,7 @@ document.addEventListener('keyup', (button) => {
         print();
 
         if (text.slice(thisLetter) == false) {
-            console.log('finish');
+            seeText.innerHTML = "";
         }
     } else {
         mistakes++;
@@ -45,5 +44,17 @@ function print() {
         result = result.slice(0, 20);
         result += "...";
     }
-    seeText.innerHTML = `<div class="printed">${printed}</div>` + result;
+
+    if (printed.at(-1) == " ") {
+        printed = printed.slice(0, printed.length - 1) + "&#160;";
+    }
+    if (result[0] == " ") {
+        result = "&#160;" + result.slice(1);
+    }
+
+    if (text.slice(thisLetter) == false) {
+        seeText.innerHTML = "";
+    } else {
+        seeText.innerHTML = `<div class="printed">${printed}</div>` + result;
+    }
 }
