@@ -50,7 +50,7 @@ body {
 }
 
 .row2 {
-  grid-template-columns: 1fr repeat(12, 0.5fr) 0.6fr;
+  grid-template-columns: 0.7fr repeat(12, 0.5fr) 0.6fr;
 }
 
 .row3 {
@@ -84,6 +84,30 @@ body {
   border: 2px solid black;
   border-radius: 10px;
   padding: 15px 0;
+}
+
+.red {
+  background-color: rgb(255, 54, 54);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 53);
+}
+
+.green {
+  background-color: rgb(55, 255, 55);
+}
+
+.blue {
+  background-color: rgb(83, 83, 255);
+}
+
+.pink {
+  background-color: rgb(255, 141, 160);
+}
+
+.white {
+  background-color: white;
 }
 
 .active {
