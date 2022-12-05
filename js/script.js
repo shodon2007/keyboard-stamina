@@ -3,7 +3,7 @@ let startTime = Date.now();
 let letter = text.split('');
 let mistakes = 0;
 let thisLetter = 0;
-let allowed = true;
+let allowedToPrint = true;
 let seeText = document.querySelector('.text');
 let seeButtons = document.querySelector('.buttons');
 seeText.innerHTML = text.slice(thisLetter);
@@ -11,7 +11,7 @@ seeText.innerHTML = text.slice(thisLetter);
 print();
 
 document.addEventListener('keyup', (button) => {
-    if (allowed == true) {
+    if (allowedToPrint == true) {
         resetStyles();
         print();
         let seeButton = document.getElementById(button.key);
@@ -71,7 +71,7 @@ function showModalWindow() {
     document.querySelector('.statistic').style.display = 'flex';
     let endTime = Date.now();
     let time = ((endTime - startTime) / 1000).toFixed(2);
-    allowed = false;
+    allowedToPrint = false;
     document.querySelector('.statistic__mistakes').innerHTML = `Ошибки: ${mistakes}`;
     document.querySelector('.statistic__time').innerHTML = `Время: ${time} секунд`;
 }
