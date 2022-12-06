@@ -68,6 +68,11 @@ function print() {
 
 
 function showModalWindow() {
+    (function showSpeedPrint() {
+        let time = Date.now() - startTime;
+        time = (text.length / (Math.floor(time / 1000) / 60)).toFixed(0);
+        document.querySelector('.statistic__speed').innerHTML = `Скорость ${time} ЗН/М`;
+    })()
     document.querySelector('.statistic').style.display = 'flex';
     let endTime = Date.now();
     let time = ((endTime - startTime) / 1000).toFixed(2);

@@ -42,12 +42,30 @@
 }
 
 .statistic__body {
-  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   border-radius: 30px;
   border: 3px solid black;
   padding: 30px;
   height: 200px;
   background-color: white;
+}
+
+.statistic__nav {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.statistic__button {
+  color: black;
+  text-decoration: none;
+  font-family: "Iceland", cursive;
+  background-color: rgb(55, 255, 55);
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
 .time {
@@ -69,8 +87,9 @@ body {
 }
 
 .text {
+  text-transform: uppercase;
   font-family: Roboto;
-  font-size: 60px;
+  font-size: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
