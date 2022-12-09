@@ -1,6 +1,7 @@
 let text = document.querySelector('.text').textContent;
 let startTime = Date.now();
-let letter = text.split('');
+let letter = getArrayText(text);
+text = letter.join('');
 let mistakes = 0;
 let thisLetter = 0;
 let allowedToPrint = true;
@@ -79,4 +80,26 @@ function showModalWindow() {
     allowedToPrint = false;
     document.querySelector('.statistic__mistakes').innerHTML = `Ошибки: ${mistakes}`;
     document.querySelector('.statistic__time').innerHTML = `Время: ${time} секунд`;
+}
+
+
+function getArrayText(text) {
+    let letter = text.split('');
+    let count = 0;
+
+
+
+    return letter.filter((el) => {
+        if (el == " ") {
+            count++;
+        } else {
+            count = 0;
+        }
+
+        if (count >= 2 || el == "\n") {
+            return false;
+        } else {
+            return true;
+        }
+    });
 }
