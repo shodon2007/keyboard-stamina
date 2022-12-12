@@ -179,11 +179,28 @@ body {
 
 @media (max-width: 1200px) {
     .body {
+        width: 100%;
         padding: 10px;
+    }
+
+    .keyboard {
+        width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
     }
 }
 
 @media (max-width: 1000px) {
+    .text {
+        font-size: 30px;
+    }
+
     .lesson__list {
         padding: 10px;
         grid-template-columns: repeat(4, 1fr);
