@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kavoon&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Iceland", cursive;
 }
 
 .lesson__list {
@@ -16,7 +15,6 @@
 }
 
 .lesson__href {
-  font-family: "Iceland", cursive;
   border: 3px solid black;
   font-size: 30px;
   color: black;
@@ -57,7 +55,6 @@
   width: 100%;
   color: black;
   text-decoration: none;
-  font-family: "Iceland", cursive;
   background-color: rgb(55, 255, 55);
   padding: 5px 10px;
   border-radius: 5px;
@@ -83,8 +80,6 @@ body {
 }
 
 .text {
-  text-transform: uppercase;
-  font-family: Roboto;
   font-size: 50px;
   display: flex;
   align-items: center;
@@ -138,7 +133,6 @@ body {
 }
 
 .button {
-  font-family: "Iceland", cursive;
   text-align: center;
   font-size: 25px;
   border: 2px solid black;
