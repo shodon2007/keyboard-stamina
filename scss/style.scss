@@ -15,6 +15,19 @@
     gap: 10px;
 }
 
+.progress {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 10px;
+    width: 100vw;
+}
+
+.progress__body {
+    background-color: red;
+    height: 100%;
+}
+
 .lesson__href {
     border: 3px solid black;
     font-size: 30px;

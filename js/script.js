@@ -43,6 +43,8 @@ function resetStyles() {
 function print() {
     let result = text.slice(thisLetter);
     let printed = text.slice((thisLetter >= 10) ? (thisLetter - 10) : 0, thisLetter);
+    // console.log(((thisLetter * text.length) / 100).toFixed())
+    document.querySelector('.progress__body').style.width = (thisLetter / text.length * 100).toFixed() + '%';
 
 
     if (result.length >= 20) {
