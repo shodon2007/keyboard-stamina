@@ -43,7 +43,6 @@ function resetStyles() {
 function print() {
     let result = text.slice(thisLetter);
     let printed = text.slice((thisLetter >= 10) ? (thisLetter - 10) : 0, thisLetter);
-    // console.log(((thisLetter * text.length) / 100).toFixed())
     document.querySelector('.progress__body').style.width = (thisLetter / text.length * 100).toFixed() + '%';
 
 
@@ -73,15 +72,15 @@ function print() {
 function showModalWindow() {
     (function showSpeedPrint() {
         let time = Date.now() - startTime;
-        time = (text.length / (Math.floor(time / 1000) / 60)).toFixed(0);
-        document.querySelector('.statistic__speed').innerHTML = `Скорость ${time} ЗН/М`;
+        let speed = (text.length / (Math.floor(time / 1000) / 60)).toFixed(0);
+        document.querySelector('.statistic__speed').innerHTML = `Speed: <span style='color: rgb(0, 150, 0)'>${speed}</span> WRM`;
     })()
     document.querySelector('.statistic').style.display = 'flex';
     let endTime = Date.now();
     let time = ((endTime - startTime) / 1000).toFixed(2);
     allowedToPrint = false;
-    document.querySelector('.statistic__mistakes').innerHTML = `Ошибки: ${mistakes}`;
-    document.querySelector('.statistic__time').innerHTML = `Время: ${time} секунд`;
+    document.querySelector('.statistic__mistakes').innerHTML = `Mistakes: <span style='color: rgb(255, 0, 0)'>${mistakes}</span>`;
+    document.querySelector('.statistic__time').innerHTML = `Time: <span style='color: rgb(0, 150, 0)'>${time}</span>s`;
 }
 
 
