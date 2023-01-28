@@ -29,6 +29,10 @@ document.addEventListener('keyup', (button) => {
             mistakes++;
         }
         document.getElementById(text[thisLetter])?.classList.add("active");
+    } else {
+        if (button.key == 'Enter') {
+            location.reload()
+        }
     }
 });
 
