@@ -11,36 +11,38 @@ seeText.innerHTML = text.slice(thisLetter);
 
 print();
 
-document.addEventListener('keyup', (button) => {
-    if (allowedToPrint == true) {
-        resetStyles();
-        print();
-        let seeButton = document.getElementById(button.key);
-        seeButton.classList.add('click');
+document.addEventListener('keyup', (e) => pressedButton(e));
 
-        if (button.key == letter[thisLetter]) {
+function pressedButton(button) {
+    if (allowedToPrint) {
+        removeClassInButtons();
+
+        const correctlyPressed = button.key == letter[thisLetter];
+
+        if (correctlyPressed) {
             thisLetter++;
             print();
-
-            if (text.slice(thisLetter) == false) {
-                seeText.innerHTML = "";
-            }
+            addClassInButton();
         } else {
             mistakes++;
         }
-        document.getElementById(text[thisLetter])?.classList.add("active");
-    } else {
-        if (button.key == 'Enter') {
-            location.reload()
-        }
-    }
-});
 
-function resetStyles() {
-    let buttonList = document.querySelectorAll('.button');
-    buttonList.forEach((key) => {
-        key.classList.remove('active');
-        key.classList.remove('click');
+        return;
+    }
+
+    if (button.key == 'Enter') {
+        location.reload()
+    }
+}
+
+function addClassInButton() {
+    document.getElementById(text[thisLetter]).classList.add("active");
+}
+
+function removeClassInButtons() {
+    let getAllButtons = document.querySelectorAll('.button');
+    getAllButtons.forEach((button) => {
+        button.classList.remove('active');
     })
 }
 
